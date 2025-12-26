@@ -13,12 +13,13 @@ const POSTS = [
 
 async function fetchMD(file) {
   try {
-    const response = await fetch(`/posts/${file}`);
+    // Caminho relativo correto para GitHub Pages
+    const response = await fetch(`posts/${file}`);
     if (!response.ok) throw new Error('Post não encontrado');
     return await response.text();
   } catch (error) {
     console.error(`Erro ao carregar ${file}:`, error);
-    return `# Erro\n\nNão foi possível carregar o post.`;
+    return `# Erro ao carregar post\n\nVerifique se o arquivo ${file} existe na pasta /posts/`;
   }
 }
 
@@ -93,7 +94,7 @@ if (file) {
 
     matches.forEach(p => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="index.html?file=${encodeURIComponent(p.file)}">${p.title}</a>`;
+      li.innerHTML = `<a href="?file=${encodeURIComponent(p.file)}">${p.title}</a>`;
       results.appendChild(li);
     });
   }
@@ -114,7 +115,7 @@ if (file) {
     ul.innerHTML = "";
     posts.forEach(p => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="index.html?file=${encodeURIComponent(p.file)}">${p.title}</a>`;
+      li.innerHTML = `<a href="?file=${encodeURIComponent(p.file)}">${p.title}</a>`;
       ul.appendChild(li);
     });
   });
