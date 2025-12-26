@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Frontkit</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="./assets/icons/orange.svg" type="image/svg+xml">
+</head>
+
+<body>
+     <header>
+
+          <h1>
+               <img class="logo" src="./assets/img/logotype.png" alt="Frontkit Logo">
+               Frontkit
+          </h1>
+          <nav>
+               <a href="index.html">Home</a>
+               <a href="index.html?search=">Pesquisar</a>
+               <a href="#contato">Contato</a>
+               <a href="https://github.com/devgbr86/profile/releases" target="_blank"
+                    rel="noopener noreferrer">Ebook</a>
+          </nav>
+     </header>
+
+     <main>
+
+          <!-- HERO -->
+          <section id="hero">
+               <div class="hero-content">
+                    <h2>Este blog tem como proposta...</h2>
+                    <p>Explorar e compartilhar conhecimento sobre desenvolvimento front-end, design de interfaces e as
+                         melhores práticas para criar experiências web modernas e acessíveis.</p>
+
+               </div>
+          </section>
+
+
+
+          <!-- LISTA -->
+          <section id="list-view">
+
+               <ul id="posts"></ul>
+          </section>
+
+          <!-- POST -->
+          <section id="post-view" style="display:none">
+               <a href="index.html" class="back-link">← Voltar</a>
+               <article id="content"></article>
+          </section>
+
+          <!-- SEARCH -->
+          <section id="search-view" style="display:none">
+               <a href="index.html" class="back-link">← Voltar</a>
+               <div class="search-box">
+                    <input id="q" type="text" placeholder="Buscar posts..." />
+               </div>
+               <ul id="results"></ul>
+          </section>
+     </main>
+
+     <footer id="contato">
+          <div class="footer-content">
+               <h3>Entre em Contato</h3>
+               <p>Gostou do conteúdo? Fique à vontade para entrar em contato!</p>
+               <div class="contact-links">
+                    <a href="mailto:topverbs@gmail.com" class="contact-link">
+                         <span class="icon">✉️</span>
+                         <span>Email</span>
+                    </a>
+                    <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer"
+                         class="contact-link">
+                         <span class="icon">💾</span>
+                         <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/devgbr" target="_blank" rel="noopener noreferrer"
+                         class="contact-link">
+                         <span class="icon">🌐</span>
+                         <span>LinkedIn</span>
+                    </a>
+               </div>
+               <p class="footer-note">© 2025 Frontkit</p>
+          </div>
+     </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+     <script src="script.js"></script>
+</body>
+
+</html>
