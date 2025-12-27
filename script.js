@@ -82,7 +82,7 @@ if (file) {
     results.innerHTML = "";
 
     if (!q) {
-      results.innerHTML = '<li style="color: #999;">Digite algo para buscar...</li>';
+      results.innerHTML = '<li style="color: #999;">...</li>';
       return;
     }
 
